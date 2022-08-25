@@ -84,8 +84,7 @@
                     <connections>
                         <outlet property="imageViewDetail" destination="B51-dq-DFv" id="CY0-7u-2QC"/>
                         <outlet property="nameLbl" destination="aKF-hN-Oq7" id="dkh-6z-jdG"/>
-                        <outlet property="observeReviews" destination="hE1-Hl-QVf" id="ijR-h5-1n1"/>
-                        <outlet property="openReviews" destination="a22-71-5qm" id="fTj-Cm-m10"/>
+                        <outlet property="observeReviews" destination="a22-71-5qm" id="iSL-cf-Gdi"/>
                         <outlet property="priceLbl" destination="SzC-zq-JBT" id="aiQ-OY-hBa"/>
                         <outlet property="ratingLbl" destination="rRq-15-1x2" id="fn8-LE-R4f"/>
                         <outlet property="stackView" destination="ebB-Of-vAZ" id="C0H-Dj-ZNF"/>

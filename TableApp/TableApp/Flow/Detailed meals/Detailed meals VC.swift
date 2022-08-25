@@ -16,7 +16,6 @@ final class Detailed_meals_VC: UIViewController {
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var ratingLbl: UILabel!
     @IBOutlet weak var priceLbl: UILabel!
-    @IBOutlet weak var openReviews: UIButton!
     @IBOutlet weak var observeReviews: UIButton!
     // MARK: - Properties
     
@@ -44,5 +43,9 @@ final class Detailed_meals_VC: UIViewController {
         nameLbl.text = meal?.name
         ratingLbl.text = meal?.ratingBar
         priceLbl?.text = String(meal!.price) + " " + "BYN"
+        
+        let showReview = "Посмотреть отзывы (\(meal!.feedbacks.count))"
+        observeReviews.setTitle(showReview, for: .normal)
+        observeReviews.isEnabled = meal?.feedbacks.count != 0
     }
 }
