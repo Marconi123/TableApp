@@ -10,6 +10,8 @@ import UIKit
 final class Detailed_meals_VC: UIViewController {
     
     // MARK: - Outlets
+    
+    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var imageViewDetail: UIImageView!
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var ratingLbl: UILabel!
@@ -23,12 +25,21 @@ final class Detailed_meals_VC: UIViewController {
     // MARK: - Lifycycle
     
     override func viewDidLoad() {
-        setupUI()
+        updateUI(with: view.bounds.size)
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        updateUI(with: size)
     }
     
     // MARK: Functions
     
-    func setupUI() {
+    func updateUI(with size: CGSize) {
+        let isVertical = size.width < size.height
+        stackView.axis = isVertical ? .vertical : .horizontal
+        
+        title = meal?.name
         imageViewDetail.image = meal?.image
         nameLbl.text = meal?.name
         ratingLbl.text = meal?.ratingBar

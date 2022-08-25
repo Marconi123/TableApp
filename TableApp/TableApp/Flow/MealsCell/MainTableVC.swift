@@ -45,11 +45,14 @@ final class MainTableVC: UITableViewController {
         
         return cell
     }
+   /*
+    }
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
+    */
 
     /*
     // Override to support editing the table view.
@@ -80,12 +83,11 @@ final class MainTableVC: UITableViewController {
 
     // MARK: - Navigation
 
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+       override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
          if let DetailVC = segue.destination as? Detailed_meals_VC,
             let selectedIndexPath = tableView.indexPathForSelectedRow
          {
              DetailVC.meal = meals[selectedIndexPath.row]
          }
      }
-
 }
